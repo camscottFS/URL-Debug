@@ -43,3 +43,5 @@ Event at 15:06:52 @ app.js on line 65 GET:/urls/:id
 SUCCESS
 Read URL by ID
 ```
+
+This debugger will save log files to a folder called ```logs``` in your the root directory of the application.
