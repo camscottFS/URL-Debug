@@ -1,6 +1,22 @@
 ## Shurl Debugging Utility Tool
 
-The ```.env``` file is located in ```node_modules/shurl-debug/```
+The ```.env``` file is located your root directory.
+
+You'll need to add the following to the ```.env``` file:
+
+```
+DEBUG = true
+DEBUG_CONSOLE = true
+DEBUG_MSG_LOG = true
+```
+
+You can automatically install the Debugging tool as an NPM Package like this:
+
+```
+npm install shurl-debug --save
+```
+
+The files will then be saved in ```node_modules```
 
 To turn off the debugging tool can simply edit the ```.env``` file and change  ```DEBUG = true``` to ```DEBUG = false```
 
