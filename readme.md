@@ -1,5 +1,7 @@
 ## Shurl Debugging Utility Tool
 
+[ ![Codeship Status for camscottFS/URL-Debug](https://app.codeship.com/projects/a676aff0-efc5-0134-815f-56272b961867/status?branch=master)](https://app.codeship.com/projects/208917)
+
 The ```.env``` file is located your root directory.
 
 You'll need to add the following to the ```.env``` file:
