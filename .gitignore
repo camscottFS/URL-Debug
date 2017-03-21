@@ -43,6 +43,8 @@ $RECYCLE.BIN/
 .AppleDB
 .AppleDesktop
 Network Trash Folder
+
+node_modules
 Temporary Items
 .apdisk
 *.yml
