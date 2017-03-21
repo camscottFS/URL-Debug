@@ -3,6 +3,7 @@ const expect = require('chai').expect;
 const util = require('../debugger');
 require('mocha-sinon');
 
+// Tests
 describe('Running Debugger Tests:', () => {
   beforeEach(function () {
     this.sinon.stub(console, 'log');
