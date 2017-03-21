@@ -136,3 +136,23 @@ module.exports.stream = {
     consoleLog.info(message);
   },
 };
+
+// Version incrementer
+module.exports.packageVersion = (current, release) => {
+  const version = current.split('.');
+  let n;
+  if (version.length === 3) {
+    if (release === 'major') {
+      n = parseInt(version[0], 10) + 1;
+      return `${n}.0.0`;
+    } else if (release === 'minor') {
+      n = parseInt(version[1], 10) + 1;
+      return `${version[0]}.${n}.0`;
+    } else if (release === 'patch') {
+      n = parseInt(version[2], 10) + 1;
+      return `${version[0]}.${version[1]}.${n}`;
+    }
+    return 'Invalid version.';
+  }
+  return 'Invalid version.';
+};
