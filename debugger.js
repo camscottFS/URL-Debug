@@ -4,9 +4,16 @@ Deployment of Web Applications
 March 2017
 Assignment 5: Unit Tests
 */
-
+const colors = require('colors');
 const fs = require('fs');
-require('dotenv').config()
+require('dotenv').config();
+
+  colors.setTheme({
+  success: 'green',
+  warn: 'yellow',
+  error: 'red'
+});
+
 module.exports = {
     getDate() {
       // setup variables for dataobject, month, day, year
@@ -36,7 +43,7 @@ module.exports = {
           console.warn('\n~~~~~~~~~~~~~~~~~~~~~\nDebug mode is active!\n~~~~~~~~~~~~~~~~~~~~~\n');
         }
     },
-    debug(data) {
+    debug(data, type) {
       let debug = process.env.DEBUG;
       if (debug === 'true'){
           // setup variables for logdata, logreq, date, time
@@ -113,9 +120,16 @@ module.exports = {
         // create the log
         msgLog = '-- MSG @ ' + time + ' ('+ loc + '): ' + data + '\n';
         // append entry to the current day's log
-        fs.appendFile('./logs/debug_msg_' + date + '.log', msgLog, (err) => {
-          if (err) throw err;
-          })
+              if (type == 'warn') {
+            // Warnings
+              console.warn(colors.warn(msgLog));
+          } else if (type == 'error') {
+            // Errors
+              console.error(colors.error(msgLog));
+          } else {
+            // All other logs will be in green
+              console.log(colors.success(msgLog));
+          }
         }
     }
  }
