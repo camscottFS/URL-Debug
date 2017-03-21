@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cameron Scott",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "colors": "^1.1.2",
+    "dotenv": "^4.0.0",
+    "mocha-sinon": "^2.0.0",
+    "sinon": "^2.1.0"
+  }
 }
