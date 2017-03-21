@@ -6,7 +6,14 @@ Assignment 5: Unit Tests
 */
 const colors = require('colors');
 const fs = require('fs');
-require('dotenv').config()
+require('dotenv').config();
+
+  colors.setTheme({
+  success: 'green',
+  warn: 'yellow',
+  error: 'red'
+});
+
 module.exports = {
     getDate() {
       // setup variables for dataobject, month, day, year
