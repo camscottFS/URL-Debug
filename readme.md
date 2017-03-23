@@ -20,6 +20,8 @@ npm install shurl-debug --save
 
 The files will then be saved in ```node_modules```
 
+## Logging
+
 To turn off the debugging tool can simply edit the ```.env``` file and change  ```DEBUG = true``` to ```DEBUG = false```
 
 To prevent debug messages from appearing in the console you must change ```DEBUG_CONSOLE = true``` to ```DEBUG_CONSOLE = false```.
@@ -46,4 +48,19 @@ SUCCESS
 Read URL by ID
 ```
 
-This debugger will save log files to a folder called ```logs``` in your the root directory of the application.
+To console log, use the commands for each type of log you want to generate
+Info: `consoleLog.log('info', 'Log works!');`
+Error: `consoleLog.log('info', 'Log works!');`
+Warn: `consoleLog.log('info', 'Log works!');`
+
+Logging is designed to work without invoking the console.log() function, which is against ES6 standard.
+
+## Version Bumping
+
+To log the version bumping functionality, simply require the functionality
+
+`const version = require('debugger.js').packageVersion`
+
+and then invoke it
+
+`version('1.0.0', 'major')` using the parameters, `major`, `minor`, or `patch`, subsitituting your version in the version number parameter.
